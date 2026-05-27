@@ -76,7 +76,6 @@
 }
 .v1 .brand-logo-footer {
   height: 36px;
-  filter: brightness(0) invert(1);
   opacity: 0.9;
 }
 .v1 .brand-name {

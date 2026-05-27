@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import CONTENT from './content.js';
 import './site.css';
+import logo from '../public/vireel-logo.png';
 
 function Brand() {
   return (
     <div className="brand">
-      <img src="/vireel-logo.png" alt="VIREEL" className="brand-logo" />
+      <img src={logo} alt="VIREEL" className="brand-logo" />
     </div>
   );
 }
@@ -545,7 +546,7 @@ function Footer({ c }) {
         <div className="footer-top">
           <div>
             <div className="footer-brand">
-              <img src="/vireel-logo.png" alt="VIREEL" className="brand-logo brand-logo-footer" />
+              <img src={logo} alt="VIREEL" className="brand-logo brand-logo-footer" />
             </div>
             <p
               style={{
