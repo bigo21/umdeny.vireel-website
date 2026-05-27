@@ -283,6 +283,7 @@
   border-radius: 10px;
   font-size: 13px;
   font-style: italic;
+  text-align: center;
 }
 .v1 .float-card {
   position: absolute;
@@ -1004,7 +1005,7 @@
 .v1 .footer { background: var(--ink); color: rgba(255,255,255,0.85); padding: 72px 0 32px; }
 .v1 .footer-top {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
   gap: 32px;
   padding-bottom: 48px;
   border-bottom: 1px solid rgba(255,255,255,0.12);
@@ -1026,7 +1027,6 @@
   line-height: 1.6;
   color: rgba(255,255,255,0.55);
   display: grid;
-  grid-template-columns: 2fr 1fr;
   gap: 32px;
 }
 .v1 .footer-legal {

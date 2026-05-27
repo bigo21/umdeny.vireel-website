@@ -6,10 +6,6 @@ function Brand() {
   return (
     <div className="brand">
       <span className="brand-mark"><span className="v-italic">V</span>IREEL</span>
-      <div>
-        <span className="brand-name">Vireel</span>
-        <span className="brand-sub">by Umdeny Capital</span>
-      </div>
     </div>
   );
 }
@@ -93,30 +89,47 @@ function Hero({ c, lang }) {
           <div>
             <span className="eyebrow">{h.eyebrow}</span>
             <h1 className="hero-h1">
-              {lang === 'fr'
-                ? <>Bien investir commence par <em>une bonne formation</em>.</>
-                : <>Smart investing starts with <em>proper training</em>.</>
-              }
+              {lang === "fr" ? (
+                <>
+                  Bien investir commence par <em>une bonne formation</em>.
+                </>
+              ) : (
+                <>
+                  Smart investing starts with <em>proper training</em>.
+                </>
+              )}
             </h1>
             <p className="hero-sub">{h.sub}</p>
             <p className="hero-sub">{h.sub2}</p>
             <div className="hero-ctas">
-              <a href="#formations" className="btn btn-red">{h.cta1} <span className="arr">→</span></a>
-              <a href="https://umdeny.com" className="btn btn-ghost">{h.cta2} <span className="arr">↗</span></a>
+              <a href="#formations" className="btn btn-red">
+                {h.cta1} <span className="arr">→</span>
+              </a>
+              <a
+                href="https://umdeny.com/nos-vehicules"
+                className="btn btn-ghost"
+              >
+                {h.cta2} <span className="arr">→</span>
+              </a>
             </div>
             <div className="hero-stats">
               {h.stats.map((s, i) => (
                 <div className="hero-stat" key={i}>
-                  <div className="n">{s.num}{s.unit && <span className="u">{s.unit}</span>}</div>
+                  <div className="n">
+                    {s.num}
+                    {s.unit && <span className="u">{s.unit}</span>}
+                  </div>
                   <div className="l">{s.label}</div>
                 </div>
               ))}
             </div>
           </div>
-          <div style={{ position: 'relative', paddingTop: 16 }}>
+          <div style={{ position: "relative", paddingTop: 16 }}>
             <div className="hero-visual">
               <div className="hero-frame">
-                <div className="hero-frame-placeholder">Portrait fondateur / équipe (4:5)</div>
+                <div className="hero-frame-placeholder">
+                  Portrait fondateur / équipe (4:5)
+                </div>
                 <span className="frame-label">{h.reelLabel}</span>
                 <div className="frame-caption">{h.reelCaption}</div>
               </div>
@@ -156,7 +169,7 @@ function About({ c, lang }) {
                 <em>Depuis 2019</em>
               </div>
             </div>
-            <div style={{ marginTop: 24, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+            <div style={{ marginTop: 24, display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'space-between' }}>
               <span className="pill"><span className="dot"></span>10+ {lang === 'fr' ? 'pays traversés' : 'countries'}</span>
               <span className="pill"><span className="dot"></span>14 {lang === 'fr' ? "ans d'expérience cumulée" : 'years cumulated expertise'}</span>
             </div>
@@ -463,33 +476,60 @@ function Quiz({ c, lang }) {
           <div>
             <span className="eyebrow">{q.eyebrow}</span>
             <h2>
-              {lang === 'fr'
-                ? <>Vous pensez vous connaître en tant qu'investisseur. <em>{q.h2Italic} ?</em></>
-                : <>You think you know yourself as an investor. <em>{q.h2Italic}?</em></>
-              }
+              {lang === "fr" ? (
+                <>
+                  Vous pensez vous connaître en tant qu'investisseur.{" "}
+                  <em>{q.h2Italic} ?</em>
+                </>
+              ) : (
+                <>
+                  You think you know yourself as an investor.{" "}
+                  <em>{q.h2Italic}?</em>
+                </>
+              )}
             </h2>
             <p>{q.lead}</p>
             <ul className="quiz-points">
-              {q.points.map((p, i) => <li key={i}>{p}</li>)}
+              {q.points.map((p, i) => (
+                <li key={i}>{p}</li>
+              ))}
             </ul>
           </div>
           <div className="quiz-card">
             <div className="ic">🧭</div>
-            <h4>{lang === 'fr' ? 'Quiz patrimonial' : 'Wealth profile quiz'}</h4>
+            <h4>
+              {lang === "fr" ? "Quiz patrimonial" : "Wealth profile quiz"}
+            </h4>
             <p>{q.body}</p>
-            <p style={{ fontSize: 13.5, color: 'var(--ink-soft)' }}>{q.result}</p>
-            <div className="url">
-              <span>quizz.umdeny.com</span>
-              <span className="pulse"></span>
-            </div>
-            <a href="https://quizz.umdeny.com" className="btn btn-red" style={{ width: '100%' }}>
+            <p style={{ fontSize: 13.5, color: "var(--ink-soft)" }}>
+              {q.result}
+            </p>
+            <a
+              href="https://quizz.umdeny.com"
+              className="btn btn-red"
+              style={{ width: "100%" }}
+            >
               {q.cta} <span className="arr">→</span>
             </a>
-            <div style={{ marginTop: 12, fontSize: 12, color: 'var(--mute)', textAlign: 'center' }}>{q.ctaSub}</div>
+            <div
+              style={{
+                marginTop: 12,
+                fontSize: 12,
+                color: "var(--mute)",
+                textAlign: "center",
+              }}
+            >
+              {q.ctaSub}
+            </div>
           </div>
           <div className="quiz-tail">
             <span>{q.tail}</span>
-            <a href="https://umdeny.com" style={{ color: '#fff', borderBottom: '1px solid currentColor' }}>umdeny.com ↗</a>
+            <a
+              href="https://umdeny.com"
+              style={{ color: "#fff", borderBottom: "1px solid currentColor" }}
+            >
+              {q.tailLink} ↗
+            </a>
           </div>
         </div>
       </div>
@@ -505,30 +545,45 @@ function Footer({ c }) {
         <div className="footer-top">
           <div>
             <div className="footer-brand">
-              <span className="brand-mark"><span className="v-italic">V</span>IREEL</span>
-              <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)' }}>by Umdeny Capital</span>
+              <span className="brand-mark">
+                <span className="v-italic">V</span>IREEL
+              </span>
             </div>
-            <p style={{ maxWidth: 320, fontSize: 13.5, color: 'rgba(255,255,255,0.7)' }}>{f.tagline}</p>
+            <p
+              style={{
+                maxWidth: 320,
+                fontSize: 13.5,
+                color: "rgba(255,255,255,0.7)",
+              }}
+            >
+              {f.tagline}
+            </p>
           </div>
           {f.cols.map((col, i) => (
             <div key={i}>
               <h5>{col.title}</h5>
               <ul>
-                {col.links.map((l) => <li key={l}><a href="#">{l}</a></li>)}
+                {col.links.map((l) => (
+                  <li key={l.text}>
+                    <a href={l.href}>{l.text}</a>
+                  </li>
+                ))}
               </ul>
             </div>
           ))}
         </div>
         <div className="footer-disclaim">
           <p>{f.disclaimer}</p>
-          <p style={{ textAlign: 'right' }}>
-            vireel@umdeny.com<br />
-            quizz.umdeny.com · umdeny.com
-          </p>
         </div>
         <div className="footer-legal">
           <span>{f.legal}</span>
-          <span>VIREEL · Cream Corporate</span>
+          <a
+            href="https://umdeny.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            MERIAZ · Cream Corporate
+          </a>
         </div>
       </div>
     </footer>
