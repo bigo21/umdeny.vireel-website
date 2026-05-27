@@ -69,16 +69,16 @@
   margin: 0 auto;
 }
 .v1 .brand { display: flex; align-items: center; gap: 12px; }
-.v1 .brand-mark {
-  background: var(--red);
-  color: #fff;
-  font-family: "Anton", var(--display);
-  font-size: 20px;
-  letter-spacing: 0.02em;
-  padding: 5px 12px 2px;
-  line-height: 1;
+.v1 .brand-logo {
+  height: 32px;
+  width: auto;
+  display: block;
 }
-.v1 .brand-mark .v-italic { font-style: italic; display: inline-block; transform: skewX(-8deg); margin-right: 0.05em; }
+.v1 .brand-logo-footer {
+  height: 36px;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
 .v1 .brand-name {
   font-family: var(--display);
   font-weight: 700;

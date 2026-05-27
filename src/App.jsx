@@ -5,7 +5,7 @@ import './site.css';
 function Brand() {
   return (
     <div className="brand">
-      <span className="brand-mark"><span className="v-italic">V</span>IREEL</span>
+      <img src="/vireel-logo.png" alt="VIREEL" className="brand-logo" />
     </div>
   );
 }
@@ -545,9 +545,7 @@ function Footer({ c }) {
         <div className="footer-top">
           <div>
             <div className="footer-brand">
-              <span className="brand-mark">
-                <span className="v-italic">V</span>IREEL
-              </span>
+              <img src="/vireel-logo.png" alt="VIREEL" className="brand-logo brand-logo-footer" />
             </div>
             <p
               style={{
