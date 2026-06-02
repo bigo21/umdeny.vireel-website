@@ -106,12 +106,6 @@ function Hero({ c, lang }) {
               <a href="#formations" className="btn btn-red">
                 {h.cta1} <span className="arr">→</span>
               </a>
-              <a
-                href="https://umdeny.com/nos-vehicules"
-                className="btn btn-ghost"
-              >
-                {h.cta2} <span className="arr">→</span>
-              </a>
             </div>
             <div className="hero-stats">
               {h.stats.map((s, i) => (
@@ -524,12 +518,9 @@ function Quiz({ c, lang }) {
             </div>
           </div>
           <div className="quiz-tail">
-            <span>{q.tail}</span>
-            <a
-              href="https://umdeny.com"
-              style={{ color: "#fff", borderBottom: "1px solid currentColor" }}
-            >
-              {q.tailLink} ↗
+            <span>{c.hero.cta2}</span>
+            <a href="https://umdeny.com" className="btn btn-light">
+              umdeny.com <span className="arr">↗</span>
             </a>
           </div>
         </div>

@@ -993,11 +993,12 @@
 .v1 .quiz-card .url .pulse { width: 8px; height: 8px; border-radius: 50%; background: #1F8A5B; }
 .v1 .quiz-tail {
   grid-column: 1 / -1;
-  padding-top: 24px;
+  padding-top: 28px;
   border-top: 1px solid rgba(255,255,255,0.18);
-  font-size: 13px;
-  color: rgba(255,255,255,0.8);
+  font-size: 15px;
+  color: rgba(255,255,255,0.9);
   display: flex; justify-content: space-between; align-items: center;
+  gap: 24px;
 }
 
 /* Footer */
