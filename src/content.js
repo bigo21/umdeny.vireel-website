@@ -254,7 +254,7 @@ const CONTENT = {
               crossPrice: "150 USD",
               price: "100 USD",
               suffix: "",
-              xaf: "~ 60 000 XAF / mois",
+              xaf: "~ 60 000 XAF",
               xafCross: "90 000 XAF",
             },
             {
@@ -650,7 +650,7 @@ const CONTENT = {
               crossPrice: "150 USD",
               price: "100 USD",
               suffix: "",
-              xaf: "~ 60,000 XAF / month",
+              xaf: "~ 60,000 XAF",
               xafCross: "90,000 XAF",
             },
             {
