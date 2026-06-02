@@ -1162,6 +1162,8 @@
 
   .v1 .quiz-band { grid-template-columns: 1fr; padding: 40px 32px; gap: 32px; }
   .v1 .quiz-band h2 { font-size: 36px; }
+  .v1 .quiz-tail { flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+  .v1 .quiz-tail .btn { width: 100%; justify-content: center; }
 
   .v1 .footer-top { grid-template-columns: 1fr 1fr; gap: 32px 24px; }
   .v1 .footer-disclaim { grid-template-columns: 1fr; }
@@ -1246,7 +1248,8 @@
   .v1 .quiz-band { padding: 28px 22px; border-radius: 20px; }
   .v1 .quiz-band h2 { font-size: 28px; }
   .v1 .quiz-card { padding: 24px; }
-  .v1 .quiz-tail { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .v1 .quiz-tail { flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+  .v1 .quiz-tail .btn { width: 100%; justify-content: center; }
 
   .v1 .footer { padding: 48px 0 24px; }
   .v1 .footer-top { grid-template-columns: 1fr; gap: 32px; padding-bottom: 32px; }
