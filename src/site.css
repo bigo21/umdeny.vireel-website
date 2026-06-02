@@ -665,13 +665,16 @@
 
 /* Formations */
 .v1 .formats-row {
-  display: flex; flex-wrap: wrap; gap: 10px;
+  display: flex;
+  flex-direction: ;
+  gap: 16px;
   margin-bottom: 40px;
   padding: 20px 24px;
   background: var(--card);
   border-radius: 16px;
   border: 1px solid var(--line);
   align-items: center;
+  text-align: center;
 }
 .v1 .formats-row .lbl {
   font-size: 11px;
@@ -679,7 +682,13 @@
   letter-spacing: 0.08em;
   font-weight: 600;
   color: var(--mute);
-  margin-right: 8px;
+}
+.v1 .formats-row .formats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  width: 100%;
 }
 .v1 .formats-row .fmt {
   font-size: 13px;
@@ -817,6 +826,7 @@
   border: 1px solid var(--line);
 }
 .v1 .form-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
+.v1 .form-ctas .btn { flex: 1 1 auto; justify-content: center; }
 
 .v1 .formation-soon {
   display: grid;
@@ -1157,6 +1167,8 @@
 
   .v1 .formation-bourse { grid-template-columns: 1fr; }
   .v1 .formation-soon { grid-template-columns: 1fr; }
+  .v1 .form-ctas { flex-direction: column; }
+  .v1 .form-ctas .btn { width: 100%; justify-content: center; flex: none; }
 
   .v1 .testi-grid { grid-template-columns: 1fr; }
 

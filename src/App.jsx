@@ -343,7 +343,9 @@ function Formations({ c, lang }) {
 
         <div className="formats-row">
           <span className="lbl">{f.formatLabel}</span>
-          {f.formats.map((x) => <span className="fmt" key={x}>{x}</span>)}
+          <div className="formats-grid">
+            {f.formats.map((x) => <span className="fmt" key={x}>{x}</span>)}
+          </div>
         </div>
 
         <div className="formation-bourse">
