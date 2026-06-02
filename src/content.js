@@ -32,7 +32,7 @@ const CONTENT = {
       sub: "Vous êtes en Afrique ou dans la diaspora. Vous sentez que des opportunités existent — la bourse, le trading, la crypto — mais vous n'avez pas encore les bases pour vous lancer sans risque. Nous sommes là pour ça.",
       sub2: "Depuis 2019, notre équipe accompagne des particuliers dans la gestion et le développement de leur patrimoine. Formez-vous par des experts en finance — des praticiens qui accompagnent des clients fortunés et gèrent des portefeuilles importants au quotidien.",
       cta1: "Découvrir nos formations",
-      cta2: "Pour ceux qui souhaitent passer à l'action, cliquez ici, et découvrez nos véhicules d'investissement",
+      cta2: "Pour ceux qui souhaitent passer à l'action, cliquez sur le lien, et découvrez nos véhicules d'investissement",
       stats: [
         { num: "1M+", unit: "USD", label: "de capital géré" },
         { num: "10+", label: "Projets pilotés" },
