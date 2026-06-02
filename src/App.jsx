@@ -55,6 +55,13 @@ function Header({ c, lang, setLang }) {
     }
   }, [drawerOpen]);
 
+  useEffect(() => {
+    if (!dropdownOpen) return;
+    const handler = () => setDropdownOpen(false);
+    document.addEventListener('click', handler);
+    return () => document.removeEventListener('click', handler);
+  }, [dropdownOpen]);
+
 
   return (
     <div className="nav-wrap">
@@ -66,9 +73,7 @@ function Header({ c, lang, setLang }) {
               <div
                 key={i}
                 className="nav-has-dropdown"
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
-                onClick={() => setDropdownOpen((v) => !v)}
+                onClick={(e) => { e.stopPropagation(); setDropdownOpen((v) => !v); }}
               >
                 <span className={`nav-links-item ${dropdownOpen ? 'active' : ''}`}>
                   {l.label} <span className={`nav-chevron ${dropdownOpen ? 'nav-chevron--open' : ''}`}>▾</span>
