@@ -520,7 +520,7 @@ function Quiz({ c, lang }) {
           <div className="quiz-tail">
             <span>{c.hero.cta2}</span>
             <a href="https://umdeny.com" className="btn btn-light">
-              umdeny.com <span className="arr">↗</span>
+              {lang === 'fr' ? "Nos véhicules d'investissement" : 'Our investment vehicles'} <span className="arr">↗</span>
             </a>
           </div>
         </div>
