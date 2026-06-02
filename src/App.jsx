@@ -21,24 +21,69 @@ function Banner({ c }) {
   );
 }
 
+function NavDropdown({ items }) {
+  return (
+    <div className="nav-dropdown">
+      {items.map((item, i) => {
+        const available = item.status === 'disponible' || item.status === 'available';
+        return (
+          <a
+            key={i}
+            href={available ? '#formations' : '#formations'}
+            className={`nav-dropdown-item ${!available ? 'nav-dropdown-item--soon' : ''}`}
+          >
+            <span className="nav-dropdown-icon">{item.icon}</span>
+            <span className="nav-dropdown-label">{item.label}</span>
+            <span className={`nav-dropdown-badge ${available ? 'nav-dropdown-badge--available' : ''}`}>
+              {item.status}
+            </span>
+          </a>
+        );
+      })}
+    </div>
+  );
+}
+
 function Header({ c, lang, setLang }) {
-  const [open, setOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   useEffect(() => {
-    if (open) {
+    if (drawerOpen) {
       document.body.style.overflow = 'hidden';
       return () => { document.body.style.overflow = ''; };
     }
-  }, [open]);
+  }, [drawerOpen]);
+
+  // Ferme le dropdown si on clique ailleurs
+  useEffect(() => {
+    if (!dropdownOpen) return;
+    const handler = () => setDropdownOpen(false);
+    document.addEventListener('click', handler);
+    return () => document.removeEventListener('click', handler);
+  }, [dropdownOpen]);
+
   return (
     <div className="nav-wrap">
       <div className="nav">
         <Brand />
         <nav className="nav-links">
-          {c.nav.links.map((l, i) => (
-            <a key={i} href={l.href}>
-              {l.label}{l.hasMenu && <span> ▾</span>}
-            </a>
-          ))}
+          {c.nav.links.map((l, i) =>
+            l.hasMenu ? (
+              <div
+                key={i}
+                className="nav-has-dropdown"
+                onClick={(e) => { e.stopPropagation(); setDropdownOpen((v) => !v); }}
+              >
+                <span className={`nav-links-item ${dropdownOpen ? 'active' : ''}`}>
+                  {l.label} <span className={`nav-chevron ${dropdownOpen ? 'nav-chevron--open' : ''}`}>▾</span>
+                </span>
+                {dropdownOpen && <NavDropdown items={c.nav.menu} />}
+              </div>
+            ) : (
+              <a key={i} href={l.href}>{l.label}</a>
+            )
+          )}
         </nav>
         <div className="nav-right">
           <div className="lang-toggle" onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}>
@@ -48,29 +93,41 @@ function Header({ c, lang, setLang }) {
           <a href="#contact" className="btn btn-red nav-cta-desktop" style={{ padding: '10px 18px', fontSize: 13 }}>
             {c.nav.cta} <span className="arr">→</span>
           </a>
-          <button className="nav-burger" aria-label="Menu" onClick={() => setOpen(true)}>
+          <button className="nav-burger" aria-label="Menu" onClick={() => setDrawerOpen(true)}>
             <span></span><span></span><span></span>
           </button>
         </div>
       </div>
-      {open && (
-        <div className="nav-drawer" onClick={() => setOpen(false)}>
+
+      {drawerOpen && (
+        <div className="nav-drawer" onClick={() => setDrawerOpen(false)}>
           <div className="nav-drawer-inner" onClick={(e) => e.stopPropagation()}>
             <div className="nav-drawer-head">
               <Brand />
-              <button className="nav-drawer-close" onClick={() => setOpen(false)} aria-label="Fermer">✕</button>
+              <button className="nav-drawer-close" onClick={() => setDrawerOpen(false)} aria-label="Fermer">✕</button>
             </div>
             <nav className="nav-drawer-links">
               {c.nav.links.map((l, i) => (
-                <a key={i} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
+                <a key={i} href={l.href} onClick={() => setDrawerOpen(false)}>{l.label}</a>
               ))}
+              <div className="nav-drawer-formations">
+                {c.nav.menu.map((item, i) => {
+                  const available = item.status === 'disponible' || item.status === 'available';
+                  return (
+                    <a key={i} href="#formations" className={`nav-drawer-formation ${!available ? 'nav-drawer-formation--soon' : ''}`} onClick={() => setDrawerOpen(false)}>
+                      <span>{item.icon} {item.label}</span>
+                      <span className={`nav-dropdown-badge ${available ? 'nav-dropdown-badge--available' : ''}`}>{item.status}</span>
+                    </a>
+                  );
+                })}
+              </div>
             </nav>
             <div className="nav-drawer-foot">
               <div className="lang-toggle" onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}>
                 <span className={lang === 'fr' ? 'on' : ''}>FR</span>
                 <span className={lang === 'en' ? 'on' : ''}>EN</span>
               </div>
-              <a href="#contact" className="btn btn-red" onClick={() => setOpen(false)}>
+              <a href="#contact" className="btn btn-red" onClick={() => setDrawerOpen(false)}>
                 {c.nav.cta} <span className="arr">→</span>
               </a>
             </div>
