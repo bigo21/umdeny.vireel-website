@@ -4,10 +4,5 @@
       "source": "/((?!.+\\.[a-zA-Z0-9]+$).*)",
       "destination": "/maintenance.html"
     }
-  ],
-  "functions": {
-    "api/subscribe.js": {
-      "includeFiles": "public/Guide_Investisseur_BVMAC_Vireel_2026_Final.pdf"
-    }
-  }
+  ]
 }
