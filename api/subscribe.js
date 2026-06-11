@@ -30,7 +30,7 @@ export default async function handler(req, res) {
            <p style="margin:24px 0 16px;text-align:center">
              <img src="https://vireel.umdeny.com/guide-covers.png"
                   alt="Le Guide de l'Investisseur en Bourse — VIREEL"
-                  width="260"
+                  width="520"
                   style="display:inline-block;width:260px;max-width:100%;height:auto;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.18)" />
            </p>
            <p style="margin:0 0 24px;text-align:center">
@@ -50,7 +50,7 @@ export default async function handler(req, res) {
            <p style="margin:24px 0 16px;text-align:center">
              <img src="https://vireel.umdeny.com/guide-covers.png"
                   alt="The Investor's Guide to the Stock Market — VIREEL"
-                  width="260"
+                  width="520"
                   style="display:inline-block;width:260px;max-width:100%;height:auto;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.18)" />
            </p>
            <p style="margin:0 0 24px;text-align:center">
