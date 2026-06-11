@@ -28,7 +28,7 @@ export default async function handler(req, res) {
            <p style="font-size:16px">Bonjour ${name.trim()},</p>
            <p>Voici votre <strong>Guide de l'Investisseur en Bourse</strong> :</p>
            <p style="margin:24px 0 16px;text-align:center">
-             <img src="https://vireel.umdeny.com/guide-cover.png"
+             <img src="https://vireel.umdeny.com/guide-covers.png"
                   alt="Le Guide de l'Investisseur en Bourse — VIREEL"
                   width="260"
                   style="display:inline-block;width:260px;max-width:100%;height:auto;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.18)" />
@@ -48,7 +48,7 @@ export default async function handler(req, res) {
            <p style="font-size:16px">Hello ${name.trim()},</p>
            <p>Here is your <strong>Investor's Guide to the Stock Market</strong>:</p>
            <p style="margin:24px 0 16px;text-align:center">
-             <img src="https://vireel.umdeny.com/guide-cover.png"
+             <img src="https://vireel.umdeny.com/guide-covers.png"
                   alt="The Investor's Guide to the Stock Market — VIREEL"
                   width="260"
                   style="display:inline-block;width:260px;max-width:100%;height:auto;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.18)" />
