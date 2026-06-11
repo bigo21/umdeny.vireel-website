@@ -151,7 +151,7 @@
       /* CTA block */
       .cta-block { margin-top: 36px; }
       .cta-kicker {
-        display: flex; align-items: flex-start; gap: 12px;
+        display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
         font-size: 15px; line-height: 1.55; color: var(--ink-soft);
         max-width: 520px; margin-bottom: 18px;
       }
@@ -178,7 +178,7 @@
       .cta-note {
         margin-top: 14px; font-family: var(--mono); font-size: 11px;
         letter-spacing: 0.06em; text-transform: uppercase; color: var(--mute);
-        display: inline-flex; align-items: center; gap: 8px; text-align: center;
+        display: inline-flex; align-items: center; gap: 8px; text-align: center; width: 100%;
       }
       .cta-note .dot { width: 5px; height: 5px; border-radius: 50%; background: #22a06b; }
 
@@ -391,8 +391,8 @@
 
               <div class="cta-block">
                 <div class="cta-kicker">
-                  <span data-i18n="kicker">Avant même l'ouverture du site, profitez d'un guide complet pour commencer votre parcours d'investisseur.<span class="free" data-i18n="free">100% gratuit</span></span>
-                  <!-- <span class="free" data-i18n="free">100% gratuit</span> -->
+                  <span data-i18n="kicker">Avant même l'ouverture du site, profitez d'un guide complet pour commencer votre parcours d'investisseur.</span>
+                  <span class="free" data-i18n="free">100% gratuit</span>
                 </div>
                 <button class="btn-cta" id="openForm">
                   <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg></span>
