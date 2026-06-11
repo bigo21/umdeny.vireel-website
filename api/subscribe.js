@@ -27,7 +27,13 @@ export default async function handler(req, res) {
       ? `<div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#1A1A1A">
            <p style="font-size:16px">Bonjour ${name.trim()},</p>
            <p>Voici votre <strong>Guide de l'Investisseur en Bourse</strong> :</p>
-           <p style="margin:24px 0">
+           <p style="margin:24px 0 16px;text-align:center">
+             <img src="https://vireel.umdeny.com/guide-cover.png"
+                  alt="Le Guide de l'Investisseur en Bourse — VIREEL"
+                  width="260"
+                  style="display:inline-block;width:260px;max-width:100%;height:auto;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.18)" />
+           </p>
+           <p style="margin:0 0 24px;text-align:center">
              <a href="${PDF_URL}" target="_blank"
                 style="display:inline-block;background:#E8500A;color:#fff;padding:14px 28px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none">
                Télécharger le guide (PDF)
@@ -41,7 +47,13 @@ export default async function handler(req, res) {
       : `<div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#1A1A1A">
            <p style="font-size:16px">Hello ${name.trim()},</p>
            <p>Here is your <strong>Investor's Guide to the Stock Market</strong>:</p>
-           <p style="margin:24px 0">
+           <p style="margin:24px 0 16px;text-align:center">
+             <img src="https://vireel.umdeny.com/guide-cover.png"
+                  alt="The Investor's Guide to the Stock Market — VIREEL"
+                  width="260"
+                  style="display:inline-block;width:260px;max-width:100%;height:auto;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.18)" />
+           </p>
+           <p style="margin:0 0 24px;text-align:center">
              <a href="${PDF_URL}" target="_blank"
                 style="display:inline-block;background:#E8500A;color:#fff;padding:14px 28px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none">
                Download the guide (PDF)
