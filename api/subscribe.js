@@ -34,8 +34,8 @@ export default async function handler(req, res) {
              </a>
            </p>
            <p>Ce guide couvre les bases indispensables pour comprendre, accéder et investir sur les marchés boursiers d'Afrique centrale — à votre rythme.</p>
-           <p>Le site <strong>vireel.umdeny.com</strong> sera bientôt disponible avec nos formations complètes.</p>
-           <p style="margin-top:32px;color:#8C8479;font-size:13px">— L'équipe Vireel · Umdeny Capital<br>formation@umdeny.com</p>
+           <p><a href="https://vireel.umdeny.com" style="color:#E8500A;font-weight:600">Notre site</a> sera de nouveau disponible bientôt avec nos formations complètes.</p>
+           <p style="margin-top:32px;color:#8C8479;font-size:13px">— Vireel<br>formation@umdeny.com</p>
            <p style="font-size:11px;color:#aaa;margin-top:24px">Les performances citées sont basées sur des cas réels et ne constituent pas une garantie de résultats. Tout investissement comporte des risques.</p>
          </div>`
       : `<div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#1A1A1A">
@@ -48,8 +48,8 @@ export default async function handler(req, res) {
              </a>
            </p>
            <p>This guide covers everything you need to understand, access, and invest in Central African stock markets — at your own pace.</p>
-           <p>The full site <strong>vireel.umdeny.com</strong> will be available soon with our complete training programs.</p>
-           <p style="margin-top:32px;color:#8C8479;font-size:13px">— The Vireel team · Umdeny Capital<br>formation@umdeny.com</p>
+           <p><a href="https://vireel.umdeny.com" style="color:#E8500A;font-weight:600">Our site</a> will be back up soon with our complete training programs.</p>
+           <p style="margin-top:32px;color:#8C8479;font-size:13px">— Vireel<br>formation@umdeny.com</p>
            <p style="font-size:11px;color:#aaa;margin-top:24px">Performance examples cited are based on real cases and do not constitute a guarantee of results. All investments involve risk.</p>
          </div>`,
   });
