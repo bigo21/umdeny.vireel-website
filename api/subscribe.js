@@ -31,7 +31,7 @@ export default async function handler(req, res) {
              <img src="https://vireel.umdeny.com/guide-covers.png"
                   alt="Le Guide de l'Investisseur en Bourse — VIREEL"
                   width="100%"
-                  style="display:inline-block;width:260px;max-width:100%;height:auto;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.18)" />
+                  style="display:block;width:100%;height:auto;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.18)" />
            </p>
            <p style="margin:0 0 24px;text-align:center">
              <a href="${PDF_URL}" target="_blank"
@@ -51,7 +51,7 @@ export default async function handler(req, res) {
              <img src="https://vireel.umdeny.com/guide-covers.png"
                   alt="The Investor's Guide to the Stock Market — VIREEL"
                   width="100%"
-                  style="display:inline-block;width:260px;max-width:100%;height:auto;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.18)" />
+                  style="display:block;width:100%;height:auto;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.18)" />
            </p>
            <p style="margin:0 0 24px;text-align:center">
              <a href="${PDF_URL}" target="_blank"
