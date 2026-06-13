@@ -1,8 +1,16 @@
+/* global process */
 import { Resend } from 'resend';
+import { createClient } from '@supabase/supabase-js';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const PDF_URL = 'https://vireel.umdeny.com/Guide_Investisseur_BVMAC_Vireel_2026_Final.pdf';
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_SERVICE_KEY,
+  { auth: { autoRefreshToken: false, persistSession: false } }
+);
+
+const PDF_URL = 'https://vireel.umdeny.com/api/download?src=email';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end();
@@ -15,6 +23,18 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'invalid email' });
 
   const isFr = lang !== 'en';
+
+  // Enregistrement du lead dans Supabase
+  try {
+    await supabase.from('leads').insert({
+      name: name.trim(),
+      email: email.trim(),
+      phone: phone?.trim() || null,
+      lang: lang || 'fr',
+    });
+  } catch (err) {
+    console.error('[subscribe] Supabase insert failed:', err);
+  }
 
   // Email au prospect avec lien de téléchargement
   await resend.emails.send({
