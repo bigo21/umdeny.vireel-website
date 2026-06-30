@@ -30,7 +30,7 @@ function NavDropdown({ items }) {
         return (
           <a
             key={i}
-            href={available ? '#formations' : '#formations'}
+            href={available ? '/formation-bourse-bvmac.html' : '#formations'}
             className={`nav-dropdown-item ${!available ? 'nav-dropdown-item--soon' : ''}`}
           >
             <span className="nav-dropdown-icon">{item.icon}</span>
@@ -115,7 +115,7 @@ function Header({ c, lang, setLang }) {
                 {c.nav.menu.map((item, i) => {
                   const available = item.status === 'disponible' || item.status === 'available';
                   return (
-                    <a key={i} href="#formations" className={`nav-drawer-formation ${!available ? 'nav-drawer-formation--soon' : ''}`} onClick={() => setDrawerOpen(false)}>
+                    <a key={i} href={available ? '/formation-bourse-bvmac.html' : '#formations'} className={`nav-drawer-formation ${!available ? 'nav-drawer-formation--soon' : ''}`} onClick={() => setDrawerOpen(false)}>
                       <span>{item.icon} {item.label}</span>
                       <span className={`nav-dropdown-badge ${available ? 'nav-dropdown-badge--available' : ''}`}>{item.status}</span>
                     </a>
@@ -279,8 +279,8 @@ function Opportunities({ c, lang }) {
             <span className="eyebrow">{o.eyebrow}</span>
             <h2 className="sec-h2">
               {lang === 'fr'
-                ? <>L'opportunité est là.<br/><em>{o.h2Italic} ?</em></>
-                : <><em>{o.h2}</em></>
+                ? <>L'opportunité est là.<em>{o.h2Italic} ?</em></>
+                : <>The opportunity is there.<em>{o.h2}</em></>
               }
             </h2>
           </div>
@@ -456,7 +456,7 @@ function Formations({ c, lang }) {
               {bourse.payment.map((p) => <span className="pm" key={p}>{p}</span>)}
             </div>
             <div className="form-ctas">
-              <a href="#contact" className="btn btn-red">{bourse.cta} <span className="arr">→</span></a>
+              <a href="/formation-bourse-bvmac.html" className="btn btn-red">{bourse.cta} <span className="arr">→</span></a>
               <a href="#contact" className="btn btn-ghost">{bourse.cta2} <span className="arr">→</span></a>
             </div>
           </div>
