@@ -436,6 +436,12 @@
   align-items: start;
   gap: 16px;
 }
+.v1 #opportunities .sec-head .sec-lead,
+.v1 .risks .sec-head .sec-lead,
+.v1 #formations .sec-head .sec-lead {
+  max-width: none;
+  width: 100%;
+}
 .v1 .sec-h2 {
   font-size: 56px;
   letter-spacing: -0.03em;
