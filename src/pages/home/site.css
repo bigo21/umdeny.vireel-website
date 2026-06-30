@@ -429,6 +429,13 @@
   align-items: end;
   margin-bottom: 48px;
 }
+.v1 #opportunities .sec-head,
+.v1 .risks .sec-head,
+.v1 #formations .sec-head {
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 16px;
+}
 .v1 .sec-h2 {
   font-size: 56px;
   letter-spacing: -0.03em;
